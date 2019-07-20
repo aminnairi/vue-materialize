@@ -1,6 +1,6 @@
 <template lang="pug">
     button.waves-effect.waves-light.btn(type="button")
-        i(v-if="icon" :class="`material-icons ${iconSide}`"")
+        i(v-if="icon" :class="classes"")
             {{ icon }}
         slot
 </template>
@@ -15,6 +15,11 @@ export default {
       type: String,
       default: "left",
       validator: value => ["left", "right"].includes(value)
+    }
+  },
+  computed: {
+    classes() {
+      return `material-icons ${iconSide}`;
     }
   }
 };
