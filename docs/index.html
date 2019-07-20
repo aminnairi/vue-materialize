@@ -9,10 +9,27 @@
             rel="stylesheet"
             href="https://fonts.googleapis.com/icon?family=Material+Icons"
         />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css"
+        />
         <title>Example</title>
     </head>
     <body>
-        <div id="example"></div>
+        <div id="example">
+            <div class="container">
+                <div class="row">
+                    <div class="col s12">
+                        <h2>Brand Logo</h2>
+                        <pre><code class="language-html">&lt;materialize-brand-logo&gt;Application Name&lt;/materialize-brand-logo&gt;</code></pre>
+
+                        <h2>Icon</h2>
+                        <pre><code class="language-html">&lt;materialize-icon icon="face" /&gt;</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.js"></script>
         <script src="https://unpkg.com/materialize-css/dist/js/materialize.min.js"></script>
         <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
         <script src="./index.js"></script>
@@ -23,19 +40,10 @@
 
             window.addEventListener("load", function() {
                 new Vue({
-                    el: "#example",
-                    template: `
-                        <div>
-                            <header>
-                                <nav>
-                                    <div class="nav-wrapper">
-                                        <materialize-brand-logo>Example<materialize-icon icon="face" /></materialize-brand-logo> 
-                                    </div>
-                                </nav>
-                            </header>
-                        </div>
-                    `
+                    el: "#example"
                 });
+
+                hljs.initHighlightingOnLoad();
             });
         </script>
     </body>
