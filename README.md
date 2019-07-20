@@ -16,8 +16,14 @@ $ git clone https://github.com/aminnairi/vue-materialize
 $ npm install
 ```
 
-### Build
+### Development Build
 
 ```console
-$ npm run build
+$ npm run development
+```
+
+### Production Build
+
+```console
+$ npm run production
 ```
