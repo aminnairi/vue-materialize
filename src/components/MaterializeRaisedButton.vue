@@ -1,6 +1,6 @@
 <template lang="pug">
     button.waves-effect.waves-light.btn(type="button")
-        i(v-if="icon" :class="classes"")
+        i(v-if="icon" :class="classes")
             {{ icon }}
         slot
 </template>
