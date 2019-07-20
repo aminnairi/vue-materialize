@@ -1,9 +1,7 @@
 const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
 
-module.exports = ({
-    development, production
-}) => {
+module.exports = ({ development, production }) => {
     let mode = "";
 
     if (development) {
