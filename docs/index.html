@@ -1,18 +1,9 @@
 <!DOCTYPE html>
 <html lang="en-US">
     <head>
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/materialize-css/dist/css/materialize.min.css"
-        />
-        <link
-            rel="stylesheet"
-            href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css"
-        />
+        <link rel="stylesheet" href="https://unpkg.com/materialize-css/dist/css/materialize.min.css" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css" />
         <title>Example</title>
     </head>
     <body>
@@ -30,56 +21,6 @@
         <script src="https://unpkg.com/materialize-css/dist/js/materialize.min.js"></script>
         <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
         <script src="./index.js"></script>
-        <script>
-            "use strict";
-
-            Vue.use(VueMaterializeCSS);
-
-            window.addEventListener("load", function() {
-                new Vue({
-                    el: "#example",
-                    data: {
-                        components: [
-                            {
-                                name: "Icon",
-                                code: '<materialize-icon icon="face" />'
-                            },
-                            {
-                                name: "Brand Logo",
-                                code:
-                                    "<materialize-brand-logo>Application Name</materialize-brand-logo>"
-                            },
-                            {
-                                name: "Breadcrumb",
-                                code:
-                                    "<materialize-breadcrumb>\n    <!-- breadcrumb items here -->\n</materialize-breadcrumb>"
-                            },
-                            {
-                                name: "Breadcrumb Item",
-                                code:
-                                    '<materialize-breadcrumb-item>Home</materialize-breadcrumb-item>\n<materialize-breadcrumb-item to="products">Products</materialize-breadcrumb-item>'
-                            }
-                        ]
-                    },
-
-                    computed: {
-                        sortedComponents() {
-                            return this.components.sort(function(
-                                firstComponent,
-                                secondComponent
-                            ) {
-                                return firstComponent.name.localeCompare(
-                                    secondComponent.name
-                                );
-                            });
-                        }
-                    },
-
-                    mounted() {
-                        Prism.highlightAll();
-                    }
-                });
-            });
-        </script>
+        <script src="./docs.js"></script>
     </body>
 </html>
