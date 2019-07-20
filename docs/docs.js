@@ -46,7 +46,7 @@ window.addEventListener("load", () => {
                     name: "Column"
                 },
                 {
-                    code: '<materialize-navbar>\n  <!-- Navbar items -->\n</materialize-navbar>',
+                    code: '<materialize-navbar>\n  <!-- Navbar items -->\n</materialize-navbar>\n\n<materialize-navbar fixed>\n  <!-- Navbar items -->\n</materialize-navbar>',
                     name: "Navbar"
                 }
             ]
