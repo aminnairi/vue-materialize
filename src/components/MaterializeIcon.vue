@@ -1,5 +1,5 @@
-<template lang="pug">
-    i.material-icons {{ icon }}
+<template>
+  <i class="material-icons">{{ icon }}</i>
 </template>
 <script>
 export default {
