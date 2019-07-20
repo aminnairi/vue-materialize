@@ -1,7 +1,7 @@
 import MaterializeBrandLogo from "./components/MaterializeBrandLogo.vue";
 
-export const VueMaterializeCSS = {
+export default {
     install(Vue) {
-        Vue.component("MaterializeBrandLogo", MaterializeBrandLogo);
+        Vue.component("materialize-brand-logo", MaterializeBrandLogo);
     }
 };
