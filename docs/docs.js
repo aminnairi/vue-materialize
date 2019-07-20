@@ -62,6 +62,10 @@ window.addEventListener("load", () => {
         mounted() {
             // eslint-disable-next-line
             Prism.highlightAll();
+            // eslint-disable-next-line
+            M.ScrollSpy.init(document.querySelectorAll(".scrollspy"));
+            // eslint-disable-next-line
+            M.Pushpin.init(document.querySelector("#fixed-navigation"));
         }
     });
 });
