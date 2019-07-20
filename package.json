@@ -1,0 +1,38 @@
+{
+    "name": "@aminnairi/vue-materialize",
+    "version": "0.1.0",
+    "description": "Vue Components for MaterializeCSS",
+    "main": "dist/index.js",
+    "files": [
+        "dist"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/aminnairi/vue-materialize.git"
+    },
+    "scripts": {
+        "build": "webpack"
+    },
+    "keywords": [
+        "vue",
+        "materialize"
+    ],
+    "author": "Amin NAIRI <https://github.com/aminnairi>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/aminnairi/vue-materialize/issues"
+    },
+    "homepage": "https://github.com/aminnairi/vue-materialize#readme",
+    "devDependencies": {
+        "@babel/core": "^7.5.5",
+        "@babel/preset-env": "^7.5.5",
+        "babel-loader": "^8.0.6",
+        "sass": "^1.22.7",
+        "sass-loader": "^7.1.0",
+        "vue-loader": "^15.7.1",
+        "vue-style-loader": "^4.1.2",
+        "vue-template-compiler": "^2.6.10",
+        "webpack": "^4.36.1",
+        "webpack-cli": "^3.3.6"
+    }
+}
