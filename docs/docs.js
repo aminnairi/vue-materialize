@@ -8,8 +8,13 @@ window.addEventListener("load", () => {
             sortedComponents() {
                 return this.components.sort((firstComponent,
                     secondComponent) => firstComponent.name.localeCompare(secondComponent.name));
+            },
+
+            style() {
+                return "color: initial;";
             }
         },
+
         data: {
             components: [
                 {
@@ -31,6 +36,16 @@ window.addEventListener("load", () => {
             ]
         },
         el: "#example",
+
+        methods: {
+            href(name) {
+                return `#${ this.id(name) }`;
+            },
+
+            id(name) {
+                return name.toLowerCase().replace(" ", "-");
+            }
+        },
 
         mounted() {
             // eslint-disable-next-line
