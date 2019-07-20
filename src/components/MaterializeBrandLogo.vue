@@ -1,5 +1,5 @@
 <template>
-    <a href="brand-logo">
+    <a href="" class="brand-logo">
         <slot />
     </a>
 </template>
