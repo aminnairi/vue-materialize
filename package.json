@@ -11,7 +11,8 @@
         "url": "git+https://github.com/aminnairi/vue-materialize.git"
     },
     "scripts": {
-        "build": "webpack"
+        "development": "webpack --env.development",
+        "production": "webpack --env.production"
     },
     "keywords": [
         "vue",
