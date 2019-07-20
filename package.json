@@ -1,5 +1,5 @@
 {
-    "name": "@aminnairi/vue-materialize",
+    "name": "vue-materializecss",
     "version": "0.1.0",
     "description": "Vue Components for MaterializeCSS",
     "main": "dist/index.js",
