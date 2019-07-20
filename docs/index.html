@@ -1,26 +1,37 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <link rel="stylesheet" href="https://unpkg.com/materialize-css/dist/css/materialize.min.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css" />
-        <title>Example</title>
-    </head>
-    <body>
-        <div id="example">
-            <div class="container">
-                <div class="row">
-                    <div class="col s12" v-for="component in sortedComponents">
-                        <h2>{{ component.name }}</h2>
-                        <pre><code class="language-html">{{ component.code }}</code></pre>
+	<head>
+		<link rel="stylesheet" href="https://unpkg.com/materialize-css/dist/css/materialize.min.css" />
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css" />
+		<title>Example</title>
+	</head>
+	<body>
+		<div id="example">
+			<div class="container">
+				<div class="row">
+                    <div class="col s10">
+                        <div class="row">
+                            <div class="col s12 section scrollspy" v-for="component in sortedComponents" :id="component.slug">
+                                <h2>{{ component.name }}</h2>
+                                <pre><code class="language-html">{{ component.code }}</code></pre>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.js"></script>
-        <script src="https://unpkg.com/materialize-css/dist/js/materialize.min.js"></script>
-        <script src="https://unpkg.com/vue/dist/vue.min.js"></script>
-        <script src="./index.js"></script>
-        <script src="./docs.js"></script>
-    </body>
+					<div class="col s2 hide-on-small-only">
+						<ul class="section table-of-contents" id="fixed-navigation">
+							<li v-for="component in sortedComponents">
+                                <a :href="`#${component.slug}`">{{ component.name }}</a>
+                            </li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.js"></script>
+		<script src="https://unpkg.com/materialize-css/dist/js/materialize.min.js"></script>
+		<script src="https://unpkg.com/vue/dist/vue.min.js"></script>
+		<script src="./index.js"></script>
+		<script src="./docs.js"></script>
+	</body>
 </html>
