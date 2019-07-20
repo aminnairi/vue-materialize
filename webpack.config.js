@@ -41,6 +41,8 @@ module.exports = ({ development, production }) => {
 
         output: {
             filename: "index.js",
+            library: "VueMaterializeCSS",
+            libraryTarget: "window",
             path: path.resolve("dist")
         },
 
