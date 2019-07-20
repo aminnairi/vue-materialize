@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en-US">
 	<head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="stylesheet" href="https://unpkg.com/materialize-css/dist/css/materialize.min.css" />
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/themes/prism.min.css" />
@@ -10,7 +12,7 @@
 		<div id="example">
 			<div class="container">
 				<div class="row">
-                    <div class="col s10">
+                    <div class="col s12 m10 l10 xl10">
                         <div class="row">
                             <div class="col s12 section scrollspy" v-for="component in sortedComponents" :id="component.slug">
                                 <h2>{{ component.name }}</h2>
@@ -18,7 +20,7 @@
                             </div>
                         </div>
                     </div>
-					<div class="col s2 hide-on-small-only">
+					<div class="col m2 l2 xl2 hide-on-small-only">
 						<ul class="section table-of-contents" id="fixed-navigation">
 							<li v-for="component in sortedComponents">
                                 <a :href="`#${component.slug}`">{{ component.name }}</a>
