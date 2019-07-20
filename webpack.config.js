@@ -47,6 +47,7 @@ module.exports = [
 
         target: "web"
     }),
+
     merge(commonConfiguration, {
         output: {
             filename: "index.common.js",
@@ -54,5 +55,15 @@ module.exports = [
         },
 
         target: "node"
+    }),
+
+    merge(commonConfiguration, {
+        output: {
+            filename: "index.js",
+            libraryTarget: "window",
+            path: path.resolve("docs")
+        },
+
+        target: "web"
     })
 ];
