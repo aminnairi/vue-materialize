@@ -99,6 +99,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n/* ha
 
 /***/ }),
 
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/components/MaterializeIcon.vue?vue&type=script&lang=js&":
+/*!*******************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options!./src/components/MaterializeIcon.vue?vue&type=script&lang=js& ***!
+  \*******************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: {\n    icon: {\n      type: String,\n      required: true\n    }\n  }\n});\n\n//# sourceURL=webpack://VueMaterializeCSS/./src/components/MaterializeIcon.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
 /***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/MaterializeBrandLogo.vue?vue&type=template&id=48994335&":
 /*!**************************************************************************************************************************************************************************************************************!*\
   !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/MaterializeBrandLogo.vue?vue&type=template&id=48994335& ***!
@@ -108,6 +120,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n/* ha
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"a\",\n    { staticClass: \"brand-logo\", attrs: { href: \"\" } },\n    [_vm._t(\"default\")],\n    2\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack://VueMaterializeCSS/./src/components/MaterializeBrandLogo.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/MaterializeIcon.vue?vue&type=template&id=adfa9034&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./src/components/MaterializeIcon.vue?vue&type=template&id=adfa9034& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"i\", { staticClass: \"material-icons\" }, [_vm._v(_vm._s(_vm.icon))])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=webpack://VueMaterializeCSS/./src/components/MaterializeIcon.vue?./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
@@ -159,6 +183,42 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 
 /***/ }),
 
+/***/ "./src/components/MaterializeIcon.vue":
+/*!********************************************!*\
+  !*** ./src/components/MaterializeIcon.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _MaterializeIcon_vue_vue_type_template_id_adfa9034___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./MaterializeIcon.vue?vue&type=template&id=adfa9034& */ \"./src/components/MaterializeIcon.vue?vue&type=template&id=adfa9034&\");\n/* harmony import */ var _MaterializeIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MaterializeIcon.vue?vue&type=script&lang=js& */ \"./src/components/MaterializeIcon.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _MaterializeIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _MaterializeIcon_vue_vue_type_template_id_adfa9034___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _MaterializeIcon_vue_vue_type_template_id_adfa9034___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"src/components/MaterializeIcon.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=webpack://VueMaterializeCSS/./src/components/MaterializeIcon.vue?");
+
+/***/ }),
+
+/***/ "./src/components/MaterializeIcon.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./src/components/MaterializeIcon.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_MaterializeIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/babel-loader/lib!../../node_modules/vue-loader/lib??vue-loader-options!./MaterializeIcon.vue?vue&type=script&lang=js& */ \"./node_modules/babel-loader/lib/index.js!./node_modules/vue-loader/lib/index.js?!./src/components/MaterializeIcon.vue?vue&type=script&lang=js&\");\n/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__[\"default\"] = (_node_modules_babel_loader_lib_index_js_node_modules_vue_loader_lib_index_js_vue_loader_options_MaterializeIcon_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[\"default\"]); \n\n//# sourceURL=webpack://VueMaterializeCSS/./src/components/MaterializeIcon.vue?");
+
+/***/ }),
+
+/***/ "./src/components/MaterializeIcon.vue?vue&type=template&id=adfa9034&":
+/*!***************************************************************************!*\
+  !*** ./src/components/MaterializeIcon.vue?vue&type=template&id=adfa9034& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MaterializeIcon_vue_vue_type_template_id_adfa9034___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../node_modules/vue-loader/lib??vue-loader-options!./MaterializeIcon.vue?vue&type=template&id=adfa9034& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./src/components/MaterializeIcon.vue?vue&type=template&id=adfa9034&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MaterializeIcon_vue_vue_type_template_id_adfa9034___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_MaterializeIcon_vue_vue_type_template_id_adfa9034___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=webpack://VueMaterializeCSS/./src/components/MaterializeIcon.vue?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -167,7 +227,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _nod
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_MaterializeBrandLogo_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/MaterializeBrandLogo.vue */ \"./src/components/MaterializeBrandLogo.vue\");\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  install: function install(Vue) {\n    Vue.component(\"materialize-brand-logo\", _components_MaterializeBrandLogo_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n  }\n});\n\n//# sourceURL=webpack://VueMaterializeCSS/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _components_MaterializeBrandLogo_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/MaterializeBrandLogo.vue */ \"./src/components/MaterializeBrandLogo.vue\");\n/* harmony import */ var _components_MaterializeIcon_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/MaterializeIcon.vue */ \"./src/components/MaterializeIcon.vue\");\n\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  install: function install(Vue) {\n    Vue.component(\"materialize-brand-logo\", _components_MaterializeBrandLogo_vue__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n    Vue.component(\"materialize-icon\", _components_MaterializeIcon_vue__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n  }\n});\n\n//# sourceURL=webpack://VueMaterializeCSS/./src/index.js?");
 
 /***/ })
 
