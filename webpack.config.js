@@ -1,37 +1,51 @@
 const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
 
-module.exports = {
-    entry: path.resolve("src", "index.js"),
-    mode: "development",
+module.exports = ({
+    development, production
+}) => {
+    let mode = "";
 
-    module: {
-        rules: [
-            {
-                loader: "vue-loader",
-                test: /\.vue$/u
-            },
+    if (development) {
+        mode = "development";
+    } else if (production) {
+        mode = "production";
+    } else {
+        mode = "development";
+    }
 
-            {
-                loader: "babel-loader",
-                test: /\.js$/u
-            },
+    return {
+        entry: path.resolve("src", "index.js"),
+        mode,
 
-            {
-                test: /\.s?css$/u,
-                use: [
-                    "vue-style-loader",
-                    "css-loader",
-                    "sass-loader"
-                ]
-            }
-        ]
-    },
+        module: {
+            rules: [
+                {
+                    loader: "vue-loader",
+                    test: /\.vue$/u
+                },
 
-    output: {
-        filename: "index.js",
-        path: path.resolve("dist")
-    },
+                {
+                    loader: "babel-loader",
+                    test: /\.js$/u
+                },
 
-    plugins: [new VueLoaderPlugin()]
+                {
+                    test: /\.s?css$/u,
+                    use: [
+                        "vue-style-loader",
+                        "css-loader",
+                        "sass-loader"
+                    ]
+                }
+            ]
+        },
+
+        output: {
+            filename: "index.js",
+            path: path.resolve("dist")
+        },
+
+        plugins: [new VueLoaderPlugin()]
+    };
 };
