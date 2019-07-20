@@ -1,9 +1,12 @@
-<template lang="pug">
-    div
-        router-link.breadcrumb(v-if="router")
-            slot
-        a.breadcrumb(v-else)
-            slot
+<template>
+  <div>
+    <router-link v-if="router" class="breadcrumb">
+      <slot />
+    </router-link>
+    <a v-else class="breadcrumb">
+      <slot />
+    </a>
+  </div>
 </template>
 <script>
 export default {
