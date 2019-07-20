@@ -19,12 +19,9 @@
         <div id="example">
             <div class="container">
                 <div class="row">
-                    <div class="col s12">
-                        <h2>Brand Logo</h2>
-                        <pre><code class="language-html">&lt;materialize-brand-logo&gt;Application Name&lt;/materialize-brand-logo&gt;</code></pre>
-
-                        <h2>Icon</h2>
-                        <pre><code class="language-html">&lt;materialize-icon icon="face" /&gt;</code></pre>
+                    <div class="col s12" v-for="component in sortedComponents">
+                        <h2>{{ component.name }}</h2>
+                        <pre><code class="language-html">{{ component.code }}</code></pre>
                     </div>
                 </div>
             </div>
@@ -40,10 +37,48 @@
 
             window.addEventListener("load", function() {
                 new Vue({
-                    el: "#example"
-                });
+                    el: "#example",
+                    data: {
+                        components: [
+                            {
+                                name: "Icon",
+                                code: '<materialize-icon icon="face" />'
+                            },
+                            {
+                                name: "Brand Logo",
+                                code:
+                                    "<materialize-brand-logo>Application Name</materialize-brand-logo>"
+                            },
+                            {
+                                name: "Breadcrumb",
+                                code:
+                                    "<materialize-breadcrumb>\n    <!-- breadcrumb items here -->\n</materialize-breadcrumb>"
+                            },
+                            {
+                                name: "Breadcrumb Item",
+                                code:
+                                    '<materialize-breadcrumb-item>Home</materialize-breadcrumb-item>\n<materialize-breadcrumb-item to="products">Products</materialize-breadcrumb-item>'
+                            }
+                        ]
+                    },
 
-                hljs.initHighlightingOnLoad();
+                    computed: {
+                        sortedComponents() {
+                            return this.components.sort(function(
+                                firstComponent,
+                                secondComponent
+                            ) {
+                                return firstComponent.name.localeCompare(
+                                    secondComponent.name
+                                );
+                            });
+                        }
+                    },
+
+                    mounted() {
+                        Prism.highlightAll();
+                    }
+                });
             });
         </script>
     </body>
