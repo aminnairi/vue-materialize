@@ -1,6 +1,6 @@
 <template>
   <div>
-    <router-link v-if="router" class="breadcrumb">
+    <router-link v-if="to" class="breadcrumb">
       <slot />
     </router-link>
     <a v-else class="breadcrumb">
@@ -9,12 +9,5 @@
   </div>
 </template>
 <script>
-export default {
-  props: {
-    router: {
-      type: Boolean,
-      default: false
-    }
-  }
-};
+export default {};
 </script>
