@@ -57,7 +57,22 @@
                     <span>{{ component.name }}</span>
                   </h2>
                 </a>
-                <pre><code class="language-html">{{ component.code }}</code></pre>
+                <div class="card">
+                  <div class="card-tabs">
+                    <ul class="tabs tabs-fixed-width">
+                      <li class="tab col s3"><a :href="href(component.name) + '-node'" class="teal-text text-darken-1">Node.JS</a></li>
+                      <li class="tab col s3"><a :href="href(component.name) + '-browser'" class="teal-text text-darken-1">Browser</a></li>
+                    </ul>
+                  </div>
+                  <div class="card-content card-content-unpadded">
+                    <div :id="id(component.name) + '-node'">
+                      <pre><code class="language-html">{{ component.code.node }}</code></pre>
+                    </div>
+                    <div :id="id(component.name) + '-browser'">
+                      <pre><code class="language-html">{{ component.code.browser }}</code></pre>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="col s2 hide-on-small-only">
