@@ -48,6 +48,10 @@ window.addEventListener("load", () => {
                 {
                     code: '<materialize-checkbox>Red</materialize-checkbox>\n<materialize-checkbox checked>Yellow</materialize-checkbox>\n<materialize-checkbox checked filled>Filled in</materialize-checkbox>\n<materialize-checkbox checked disabled>Green</materialize-checkbox>\n<materialize-checkbox disabled>Brown</materialize-checkbox>',
                     name: "Checkbox"
+                },
+                {
+                    code: '<materialize-navbar>\n  <!-- Navbar items -->\n</materialize-navbar>\n\n<materialize-navbar fixed>\n  <!-- Navbar items -->\n</materialize-navbar>',
+                    name: "Navbar"
                 }
             ]
         },
