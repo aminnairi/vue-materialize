@@ -561,6 +561,9 @@ export default {
           .filter(component => component.name.replace(" ", "").toLowerCase().includes(this.component.name.replace(" ", "").toLowerCase()))
           .sort((firstComponent, secondComponent) => firstComponent.name.localeCompare(secondComponent.name));
       },
+      someComponentsFound() {
+        return this.sortedComponents.length > 0;
+      },
 
       style() {
         return "color: initial;";
