@@ -32,4 +32,5 @@ main {
 
 .card-content-unpadded pre {
   margin-top: 0px;
+  margin-bottom: 0px;
 }

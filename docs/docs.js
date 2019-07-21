@@ -4,23 +4,7 @@ Vue.use(VueMaterializeCSS);
 window.addEventListener("load", () => {
   // eslint-disable-next-line
     new Vue({
-    computed: {
-      sortedComponents() {
-        this.$nextTick(() => {
-          this.initializePrism();
-          this.newScrollSpy();
-        });
-
-        return this
-          .components
-          .filter(component => component.name.replace(" ", "").toLowerCase().includes(this.component.name.replace(" ", "").toLowerCase()))
-          .sort((firstComponent, secondComponent) => firstComponent.name.localeCompare(secondComponent.name));
-      },
-
-      style() {
-        return "color: initial;";
-      }
-    },
+    el: "#app",
 
     data: {
       component: {
@@ -60,6 +44,7 @@ window.addEventListener("load", () => {
   }
 </script>`
           },
+          link: "https://materializecss.com/icons.html",
           name: "Icon"
         },
         {
@@ -95,6 +80,7 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/navbar.html",
           name: "Brand Logo"
         },
         {
@@ -134,7 +120,9 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/breadcrumbs.html",
           name: "Breadcrumb"
+
         },
         {
           code: {
@@ -171,6 +159,7 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/breadcrumbs.html",
           name: "Breadcrumb Item"
         },
         {
@@ -217,6 +206,7 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/buttons.html",
           name: "Button"
         },
         {
@@ -266,6 +256,7 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/grid.html",
           name: "Column"
         },
         {
@@ -303,6 +294,7 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/switches.html",
           name: "Switch"
         },
         {
@@ -352,6 +344,7 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/radio-buttons.html",
           name: "Radio"
         },
         {
@@ -399,6 +392,7 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/navbar.html",
           name: "Navbar"
         },
         {
@@ -438,6 +432,7 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/chips.html",
           name: "Chips"
         },
         {
@@ -481,7 +476,48 @@ export default {
 }
 </script>`
           },
+          link: "https://materializecss.com/checkboxes.html",
           name: "Checkbox"
+        },
+        {
+          code: {
+            browser: `<doctype html>
+<html>
+  <head>
+    <title>Example</title>
+  </head>
+  <body>
+    <div id="app">
+      <materialize-badge>10</materialize-badge>
+      <materialize-badge new>Triumph Street Triple S 660 A2</materialize-badge>
+      <materialize-badge new color=\"red\">Triumph Daytona 765</materialize-badge>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
+    <script>
+      new Vue({
+        el: "#app"
+      });
+    </script>
+  </body>
+</html>`,
+            node: `<template>
+  <materialize-badge>10</materialize-badge>
+  <materialize-badge new>Triumph Street Triple S 660 A2</materialize-badge>
+  <materialize-badge new color=\"red\">Triumph Daytona 765</materialize-badge>
+</template>
+<script>
+import { MaterializeBadge } from "vue-materialize";
+
+export default {
+  components: {
+    MaterializeBadge
+  }
+}
+</script>`
+          }, 
+          link: "https://materializecss.com/badges.html",
+          name: "Badge"
         }
       ],
       scrollspy: {
@@ -489,7 +525,35 @@ export default {
       },
       searching: false
     },
-    el: "#app",
+    computed: {
+      sortedComponents() {
+        this.$nextTick(() => {
+          this.initializePrism();
+          this.newScrollSpy();
+        });
+
+        return this
+          .components
+          .filter(component => component.name.replace(" ", "").toLowerCase().includes(this.component.name.replace(" ", "").toLowerCase()))
+          .sort((firstComponent, secondComponent) => firstComponent.name.localeCompare(secondComponent.name));
+      },
+
+      style() {
+        return "color: initial;";
+      }
+    },
+
+    mounted() {
+      const pushpinTarget = document.querySelector("#fixed-navigation");
+
+      this.newScrollSpy();
+      this.initializePrism();
+
+      // eslint-disable-next-line
+			M.Pushpin.init(pushpinTarget, {
+        top: 100
+      });
+    },
 
     methods: {
       href(name) {
