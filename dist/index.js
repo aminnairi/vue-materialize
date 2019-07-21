@@ -167,7 +167,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: {\n    image: {\n      type: String,\n      default: \"\"\n    },\n    alt: {\n      type: String,\n      required: undefined.image\n    },\n    closable: {\n      type: Boolean,\n      default: false\n    }\n  }\n});\n\n//# sourceURL=webpack://VueMaterializeCSS/./src/components/MaterializeChips.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
+eval("__webpack_require__.r(__webpack_exports__);\n//\n//\n//\n//\n//\n//\n//\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  props: {\n    image: {\n      type: String,\n      default: \"\"\n    },\n    alt: {\n      type: String,\n      default: \"\"\n    },\n    closable: {\n      type: Boolean,\n      default: false\n    }\n  }\n});\n\n//# sourceURL=webpack://VueMaterializeCSS/./src/components/MaterializeChips.vue?./node_modules/babel-loader/lib!./node_modules/vue-loader/lib??vue-loader-options");
 
 /***/ }),
 
