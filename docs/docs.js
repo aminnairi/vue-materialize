@@ -44,6 +44,10 @@ window.addEventListener("load", () => {
                     code:
                         '<materialize-column small="12"></materialize-column>\n<materialize-column medium="12"></materialize-column>\n<materialize-column large="12"></materialize-column>\n<materialize-column extra-large="12"></materialize-column>\n<materialize-column offset-small="12"></materialize-column>\n<materialize-column offset-medium="12"></materialize-column>\n<materialize-column offset-large="12"></materialize-column>\n<materialize-column offset-extra-large="12"></materialize-column>\n',
                     name: "Column"
+                },
+                {
+                    code: '<materialize-switch name="send-email" />\n<materialize-switch off="Non" on="Oui" name="archive-post" />',
+                    name: "Switch"
                 }
             ]
         },
