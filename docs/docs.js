@@ -44,6 +44,10 @@ window.addEventListener("load", () => {
                     code:
                         '<materialize-column small="12"></materialize-column>\n<materialize-column medium="12"></materialize-column>\n<materialize-column large="12"></materialize-column>\n<materialize-column extra-large="12"></materialize-column>\n<materialize-column offset-small="12"></materialize-column>\n<materialize-column offset-medium="12"></materialize-column>\n<materialize-column offset-large="12"></materialize-column>\n<materialize-column offset-extra-large="12"></materialize-column>\n',
                     name: "Column"
+                },
+                {
+                    code: '<materialize-radio>Red</materialize-radio>\n\n<materialize-radio with-gap>Green</materialize-radio>\n<materialize-radio with-gap>Blue</materialize-radio>\n\n<materialize-radio name="OS">Android</materialize-radio>\n<materialize-radio name="OS">iOS</materialize-radio>\n<materialize-radio name="OS" disabled>Windows Phone</materialize-radio>',
+                    name: "Radio"
                 }
             ]
         },
