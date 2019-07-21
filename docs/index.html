@@ -24,6 +24,12 @@
     </header>
     <main id="example">
       <div class="container">
+				<div class="row">
+					<div class="col s12 input-field">
+						<input id="component-name" type="text" v-model="component.name">
+						<label for="component-name">Component Name</label>
+					</div>
+				</div>
         <div class="row">
           <div class="col s12 m10">
             <div class="col s12" v-for="component in sortedComponents">
@@ -46,18 +52,28 @@
         </div>
       </div>
     </main>
-		<footer class="page-footer" style="margin-top: 40vh">
+		<footer class="page-footer teal darken-1" style="margin-top: 40vh">
 			<div class="container">
 				<div class="row">
 					<div class="col s12">
-						<h4>Example</h4>
-						<p><a href="https://github.com/aminnairi/vue-materialize" style="color: inherit;">GitHub Page</a></p>
+                        <h4>vue-materialize</h4>
+                        <p>Vue Components for MaterializeCSS</p>
 					</div>
 				</div>
 			</div>
 			<div class="footer-copyright">
 				<div class="container">
-					<span>Copyright &copy; Anwar & Amin NAIRI</span>
+                    <div class="row">
+                        <div class="col s12 m6">
+                            <span>Copyright &copy; Anwar & Amin NAIRI</span>
+                        </div>
+                        <div class="col s12 hide-on-med-and-up">
+                            <a href="https://github.com/aminnairi/vue-materialize" style="color: inherit;">GitHub Page</a>
+                        </div>
+                        <div class="col m6 right-align hide-on-small-only">
+                            <a href="https://github.com/aminnairi/vue-materialize" style="color: inherit;">GitHub Page</a>
+                        </div>
+                    </div>
 				<div>
 			</div>
 		</footer>
