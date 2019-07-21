@@ -1,6 +1,7 @@
 const path = require("path");
 const { VueLoaderPlugin } = require("vue-loader");
 const merge = require("webpack-merge");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 const commonConfiguration = {
   entry: path.resolve("src", "index.js"),
@@ -45,7 +46,9 @@ module.exports = [
       libraryTarget: "window"
     },
 
-    target: "web"
+    target: "web",
+
+		plugins: [new CleanWebpackPlugin()]
   }),
 
   merge(commonConfiguration, {
