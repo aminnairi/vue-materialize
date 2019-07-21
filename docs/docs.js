@@ -84,7 +84,9 @@ window.addEventListener("load", () => {
 				throttle: 0
 			});
       // eslint-disable-next-line
-			M.Pushpin.init(pushpinTarget);
+			M.Pushpin.init(pushpinTarget, {
+        top: 64
+      });
     }
   });
 });
