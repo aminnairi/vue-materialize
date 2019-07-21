@@ -6,7 +6,15 @@ window.addEventListener("load", () => {
     new Vue({
     computed: {
       sortedComponents() {
-        return this.components.sort((firstComponent, secondComponent) => firstComponent.name.localeCompare(secondComponent.name));
+        this.$nextTick(() => {
+          this.initializePrism();
+          this.newScrollSpy();
+        });
+
+        return this
+          .components
+          .filter(component => component.name.replace(" ", "").toLowerCase().includes(this.component.name.replace(" ", "").toLowerCase()))
+          .sort((firstComponent, secondComponent) => firstComponent.name.localeCompare(secondComponent.name));
       },
 
       style() {
@@ -15,6 +23,9 @@ window.addEventListener("load", () => {
     },
 
     data: {
+      component: {
+        name: ""
+      },
       components: [
         {
           code: '<materialize-icon icon="face" />',
@@ -60,7 +71,10 @@ window.addEventListener("load", () => {
           code: "<materialize-checkbox>Red</materialize-checkbox>\n<materialize-checkbox checked>Yellow</materialize-checkbox>\n<materialize-checkbox checked filled>Filled in</materialize-checkbox>\n<materialize-checkbox checked disabled>Green</materialize-checkbox>\n<materialize-checkbox disabled>Brown</materialize-checkbox>",
           name: "Checkbox"
         }
-      ]
+      ],
+      scrollspy: {
+        instances: null
+      }
     },
     el: "#example",
 
@@ -71,20 +85,36 @@ window.addEventListener("load", () => {
 
       id(name) {
         return name.toLowerCase().replace(" ", "-");
+      },
+
+      newScrollSpy() {
+        if (this.scrollspy.instances) {
+          this.scrollspy.instances.forEach(instance => instance.destroy());
+        }
+
+        // eslint-disable-next-line
+				this.scrollspy.instances = M.ScrollSpy.init(document.querySelectorAll(".scrollspy"), {
+          scrollOffset: 64,
+          throttle: 0
+        });
+      },
+
+      initializePrism() {
+        // eslint-disable-next-line
+				Prism.highlightAll();
       }
     },
 
     mounted() {
-			const pushpinTarget = document.querySelector("#fixed-navigation");
+      const pushpinTarget = document.querySelector("#fixed-navigation");
+
+      this.newScrollSpy();
+      this.initializePrism();
+
       // eslint-disable-next-line
-			Prism.highlightAll();
-      // eslint-disable-next-line
-			M.ScrollSpy.init(document.querySelectorAll(".scrollspy"), {
-				scrollOffset: 64,
-				throttle: 0
-			});
-      // eslint-disable-next-line
-			M.Pushpin.init(pushpinTarget);
+			M.Pushpin.init(pushpinTarget, {
+        top: 100
+      });
     }
   });
 });
