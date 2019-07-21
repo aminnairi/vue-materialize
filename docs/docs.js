@@ -46,6 +46,10 @@ window.addEventListener("load", () => {
           name: "Column"
         },
         {
+          code: '<materialize-switch name="send-email" />\n<materialize-switch off="Non" on="Oui" name="archive-post" />',
+          name: "Switch"
+        },
+        {
           code: '<materialize-radio>Red</materialize-radio>\n\n<materialize-radio with-gap>Green</materialize-radio>\n<materialize-radio with-gap>Blue</materialize-radio>\n\n<materialize-radio name="OS">Android</materialize-radio>\n<materialize-radio name="OS">iOS</materialize-radio>\n<materialize-radio name="OS" disabled>Windows Phone</materialize-radio>',
           name: "Radio"
         },
