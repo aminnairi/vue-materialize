@@ -21,28 +21,23 @@ window.addEventListener("load", () => {
           name: "Icon"
         },
         {
-          code:
-                        "<materialize-brand-logo>Application Name</materialize-brand-logo>",
+          code: "<materialize-brand-logo>Application Name</materialize-brand-logo>",
           name: "Brand Logo"
         },
         {
-          code:
-                        "<materialize-breadcrumb>\n    <!-- breadcrumb items here -->\n</materialize-breadcrumb>",
+          code: "<materialize-breadcrumb>\n    <!-- breadcrumb items here -->\n</materialize-breadcrumb>",
           name: "Breadcrumb"
         },
         {
-          code:
-                        '<materialize-breadcrumb-item>Home</materialize-breadcrumb-item>\n<materialize-breadcrumb-item to="products">Products</materialize-breadcrumb-item>',
+          code: '<materialize-breadcrumb-item>Home</materialize-breadcrumb-item>\n<materialize-breadcrumb-item to="products">Products</materialize-breadcrumb-item>',
           name: "Breadcrumb Item"
         },
         {
-          code:
-                        "<materialize-button>Button</materialize-button>\n<materialize-button floating>Button</materialize-button>\n<materialize-button flat>Button</materialize-button>\n<materialize-button submit>Button</materialize-button>\n<materialize-button large>Button</materialize-button>\n<materialize-button small>Button</materialize-button>\n<materialize-button disabled>Button</materialize-button>",
+          code: "<materialize-button>Button</materialize-button>\n<materialize-button floating>Button</materialize-button>\n<materialize-button flat>Button</materialize-button>\n<materialize-button submit>Button</materialize-button>\n<materialize-button large>Button</materialize-button>\n<materialize-button small>Button</materialize-button>\n<materialize-button disabled>Button</materialize-button>",
           name: "Button"
         },
         {
-          code:
-                        '<materialize-column small="12"></materialize-column>\n<materialize-column medium="12"></materialize-column>\n<materialize-column large="12"></materialize-column>\n<materialize-column extra-large="12"></materialize-column>\n<materialize-column offset-small="12"></materialize-column>\n<materialize-column offset-medium="12"></materialize-column>\n<materialize-column offset-large="12"></materialize-column>\n<materialize-column offset-extra-large="12"></materialize-column>\n',
+          code: '<materialize-column small="12"></materialize-column>\n<materialize-column medium="12"></materialize-column>\n<materialize-column large="12"></materialize-column>\n<materialize-column extra-large="12"></materialize-column>\n<materialize-column offset-small="12"></materialize-column>\n<materialize-column offset-medium="12"></materialize-column>\n<materialize-column offset-large="12"></materialize-column>\n<materialize-column offset-extra-large="12"></materialize-column>\n',
           name: "Column"
         },
         {
@@ -80,12 +75,16 @@ window.addEventListener("load", () => {
     },
 
     mounted() {
+			const pushpinTarget = document.querySelector("#fixed-navigation");
       // eslint-disable-next-line
-            Prism.highlightAll();
+			Prism.highlightAll();
       // eslint-disable-next-line
-            M.ScrollSpy.init(document.querySelectorAll(".scrollspy"));
+			M.ScrollSpy.init(document.querySelectorAll(".scrollspy"), {
+				scrollOffset: 64,
+				throttle: 0
+			});
       // eslint-disable-next-line
-            M.Pushpin.init(document.querySelector("#fixed-navigation"));
+			M.Pushpin.init(pushpinTarget);
     }
   });
 });
