@@ -74,9 +74,10 @@ window.addEventListener("load", () => {
       ],
       scrollspy: {
         instances: null
-      }
+      },
+      searching: false
     },
-    el: "#example",
+    el: "#app",
 
     methods: {
       href(name) {
@@ -102,6 +103,17 @@ window.addEventListener("load", () => {
       initializePrism() {
         // eslint-disable-next-line
 				Prism.highlightAll();
+      },
+      displaySearchBar() {
+        this.searching = true;
+
+        this.$nextTick(function() {
+          this.$refs.searchInput.focus();
+        });
+      },
+      hideSearchBar() {
+        this.searching = false;
+        this.component.name = "";
       }
     },
 
