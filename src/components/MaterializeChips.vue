@@ -14,7 +14,7 @@ export default {
     },
     alt: {
       type: String,
-      required: this.image
+      default: "",
     },
     closable: {
       type: Boolean,
