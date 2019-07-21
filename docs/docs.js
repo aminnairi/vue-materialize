@@ -50,6 +50,10 @@ window.addEventListener("load", () => {
           name: "Navbar"
         },
         {
+          code: '<materialize-chips>Tag</materialize-chips>\n<materialize-chips image="/img/jane-doe.jpg" alt="Profile picture of Jane Doe">Jane Doe</materialize-chips>\n<materialize-chips closable>Red</materialize-chips>',
+          name: "Chips"
+        },
+        {
           code: "<materialize-checkbox>Red</materialize-checkbox>\n<materialize-checkbox checked>Yellow</materialize-checkbox>\n<materialize-checkbox checked filled>Filled in</materialize-checkbox>\n<materialize-checkbox checked disabled>Green</materialize-checkbox>\n<materialize-checkbox disabled>Brown</materialize-checkbox>",
           name: "Checkbox"
         }
