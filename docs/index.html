@@ -77,6 +77,14 @@
                   </div>
                 </div>
               </div>
+              <div v-if="!someComponentsFound" class="col s12 m10">
+                <div>
+                  <br>
+                </div>
+                <p class="center-align grey-text">
+                  No component matches "{{ component.name }}".
+                </p>
+              </div>
             </div>
             <div class="col s2 hide-on-small-only">
               <ul class="section table-of-contents" id="fixed-navigation">
