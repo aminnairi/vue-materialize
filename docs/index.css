@@ -16,6 +16,12 @@ main {
   flex: 1 0 auto;
 }
 
+/* Change the fixed sidenav indicator color to fit the theme color */
+.table-of-contents a.active,
+.table-of-contents a:hover {
+  border-color: #00897b;
+}
+
 /* Colorize the indicator border on the tabs */
 .tabs .indicator {
   background-color: #00897b;
