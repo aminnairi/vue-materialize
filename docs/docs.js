@@ -25,6 +25,8 @@ window.addEventListener("load", () => {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -61,6 +63,8 @@ window.addEventListener("load", () => {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -99,6 +103,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -139,6 +145,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -181,6 +189,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -230,6 +240,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -274,6 +286,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -318,6 +332,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -367,6 +383,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -411,6 +429,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -453,6 +473,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
@@ -495,6 +517,8 @@ export default {
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
     <script>
+      Vue.use(VueMaterializeCSS);
+      
       new Vue({
         el: "#app"
       });
