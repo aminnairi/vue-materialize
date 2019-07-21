@@ -14,7 +14,7 @@ export default {
     },
     alt: {
       type: String,
-      default: "",
+      default: ""
     },
     closable: {
       type: Boolean,
