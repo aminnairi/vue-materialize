@@ -15,35 +15,39 @@
     <div id="app">
       <header>
         <div>
-          <nav v-if="!searching" class="teal darken-1">
-            <div class="row">
-              <div class="col s12">
-                <div class="nav-wrapper">
-                  <a href="/vue-materialize" class="brand-logo">vue-materialize</a>
-                  <ul class="right">
-                    <li @click="displaySearchBar">
-                      <a href="javascript:;">
-                        <i class="material-icons">search</i>
-                      </a>
-                    </li>
-                  </ul>
+          <div v-if="!searching" class="navbar-fixed"> 
+            <nav class="teal darken-1">
+              <div class="row">
+                <div class="col s12">
+                  <div class="nav-wrapper">
+                    <a href="/vue-materialize" class="brand-logo">vue-materialize</a>
+                    <ul class="right">
+                      <li @click="displaySearchBar">
+                        <a href="javascript:;">
+                          <i class="material-icons">search</i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-          </nav>
-          <nav v-else class="teal darken-1">
-            <div class="nav-wrapper">
-              <form>
-                <div class="input-field">
-                  <input id="component-name" v-model="component.name" ref="searchInput" type="search" required />
-                  <label class="label-icon" for="search">
-                    <i class="material-icons">search</i>
-                  </label>
-                  <i @click="hideSearchBar" class="material-icons">close</i>
-                </div>
-              </form>
-            </div>
-          </nav>
+            </nav>
+          </div>
+          <div v-else class="navbar-fixed">
+            <nav  class="teal darken-1">
+              <div class="nav-wrapper">
+                <form>
+                  <div class="input-field">
+                    <input id="component-name" v-model="component.name" ref="searchInput" type="search" required />
+                    <label class="label-icon" for="search">
+                      <i class="material-icons">search</i>
+                    </label>
+                    <i @click="hideSearchBar" class="material-icons">close</i>
+                  </div>
+                </form>
+              </div>
+            </nav>
+          </div>
         </div>
       </header>
       <main>
