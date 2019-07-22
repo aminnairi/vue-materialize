@@ -547,7 +547,8 @@ export default {
       scrollspy: {
         instances: null
       },
-      searching: false
+      searching: false,
+      lightThemeDisplayed: true
     },
     computed: {
       sortedComponents() {
@@ -613,6 +614,9 @@ export default {
          */
         M.Tabs.init(document.querySelectorAll(".tabs"));
       },
+      initializeDarkmodeJS() {
+        this.darkmode = new Darkmode();
+      },
       displaySearchBar() {
         this.searching = true;
 
@@ -623,6 +627,10 @@ export default {
       hideSearchBar() {
         this.searching = false;
         this.component.name = "";
+      },
+      toggleDarkOrLightTheme() {
+        this.darkmode.toggle();
+        this.lightThemeDisplayed = this.lightThemeDisplayed != true;
       }
     },
 
@@ -632,6 +640,7 @@ export default {
       this.newScrollSpy();
       this.initializePrism();
       this.initializeTabs();
+      this.initializeDarkmodeJS();
 
       // eslint-disable-next-line
 			M.Pushpin.init(pushpinTarget, {
