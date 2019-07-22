@@ -635,7 +635,8 @@ export default {
 
       // eslint-disable-next-line
 			M.Pushpin.init(pushpinTarget, {
-        top: 100
+        top: 100,
+        offset: 64
       });
     },
     updated() {
