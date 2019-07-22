@@ -613,6 +613,17 @@ export default {
          */
         M.Tabs.init(document.querySelectorAll(".tabs"));
       },
+      initalizeClipboardJS() {
+        const clipboard = new ClipboardJS('.copy-to-clipboard');
+
+        clipboard.on('success', function(event) {      
+          M.Toast.dismissAll();
+          
+          new M.Toast({html: "Copied.", classes: "teal darken-1"});
+
+          event.clearSelection();
+        });
+      },
       displaySearchBar() {
         this.searching = true;
 
@@ -632,6 +643,7 @@ export default {
       this.newScrollSpy();
       this.initializePrism();
       this.initializeTabs();
+      this.initalizeClipboardJS();
 
       // eslint-disable-next-line
 			M.Pushpin.init(pushpinTarget, {
