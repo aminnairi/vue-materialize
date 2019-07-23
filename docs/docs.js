@@ -547,7 +547,46 @@ export default {
       scrollspy: {
         instances: null
       },
-      searching: false
+      searching: false,
+      directives: [
+        {
+          name: "align",
+          code: {
+            node: `<template>
+  <p v-align="center">
+    I am a center aligned text.
+  </p>
+</template>
+<script>
+export default {};
+</script>    
+`,
+            browser: `<doctype html>
+<html>
+  <head>
+    <title>Example</title>
+  </head>
+  <body>
+    <div id="app">
+      <p v-align="center">
+        I am a center align text.
+      </p>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
+    <script>
+      Vue.use(VueMaterializeCSS);
+      
+      new Vue({
+        el: "#app"
+      });
+    </script>
+  </body>
+</html>`
+          },
+          link: "https://materializecss.com/helpers.html"
+        }
+      ]
     },
     computed: {
       sortedComponents() {
@@ -556,8 +595,8 @@ export default {
           this.newScrollSpy();
         });
 
-        return this
-          .components
+        return (this
+          .components.concat(this.directives))
           .filter(component => component.name.replace(" ", "").toLowerCase().includes(this.component.name.replace(" ", "").toLowerCase()))
           .sort((firstComponent, secondComponent) => firstComponent.name.localeCompare(secondComponent.name));
       },
