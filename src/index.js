@@ -13,6 +13,8 @@ import MaterializeRadio from "./components/MaterializeRadio.vue";
 import MaterializeRow from "./components/MaterializeRow.vue";
 import MaterializeSwitch from "./components/MaterializeSwitch.vue";
 
+import align from "./directives/align";
+
 export default {
   install(Vue) {
     Vue.component("materialize-badge", MaterializeBadge);
@@ -29,5 +31,7 @@ export default {
     Vue.component("materialize-radio", MaterializeRadio);
     Vue.component("materialize-row", MaterializeRow);
     Vue.component("materialize-switch", MaterializeSwitch);
+
+    Vue.directive("align", align);
   }
 };
