@@ -6,11 +6,11 @@
 <script>
 const validator = value => {
   if (value < 1) {
-    throw new Error(`expected value to be greater or equal to 1, ${value} given`);
+    throw new Error(`expected value to be greater or equal to 1, ${ value } given`);
   }
 
   if (value > 12) {
-    throw new Error(`expected value to be lower or equal to 12, ${value} given`);
+    throw new Error(`expected value to be lower or equal to 12, ${ value } given`);
   }
 
   return true;
@@ -19,54 +19,65 @@ const validator = value => {
 export default {
   props: {
     small: {
-      type: Number,
-      default: 12,
+      "default": 12,
+      "type": Number,
       validator
     },
-    offsetSmall: {
-      type: Number,
-      default: 0,
-      validator
-    },
+
     medium: {
-      type: Number,
-      default: 12,
+      "default": 12,
+      "type": Number,
       validator
     },
-    offsetMedium: {
-      type: Number,
-      default: 0,
-      validator
-    },
+
     large: {
-      type: Number,
-      default: 12,
+      "default": 12,
+      "type": Number,
       validator
     },
-    offsetLarge: {
-      type: Number,
-      default: 0,
-      validator
-    },
+
     extraLarge: {
-      type: Number,
-      default: 12,
+      "default": 12,
+      "type": Number,
       validator
     },
+
+    offsetSmall: {
+      "default": 0,
+      "type": Number,
+      validator
+    },
+
+    offsetMedium: {
+      "default": 0,
+      "type": Number,
+      validator
+    },
+
+    offsetLarge: {
+      "default": 0,
+      "type": Number,
+      validator
+    },
+
     offsetExtraLarge: {
-      type: Number,
-      default: 0,
+      "default": 0,
+      "type": Number,
       validator
     }
   },
   computed: {
     classes() {
-      const offsetSmall = this.offsetSmall > 0 ? `offset-s${this.offsetSmall}` : "";
-      const offsetMedium = this.offsetMedium > 0 ? `offset-m${this.offsetMedium}` : "";
-      const offsetLarge = this.offsetLarge > 0 ? `offset-l${this.offsetLarge}` : "";
-      const offsetExtraLarge = this.offsetExtraLarge > 0 ? `offset-xl${this.offsetExtraLarge}` : "";
-
-      return `col s${this.small} ${offsetSmall} m${this.medium} ${offsetMedium} l${this.large} ${offsetLarge} xl${this.extraLarge} ${offsetExtraLarge}`;
+      return {
+        [ `col l${ this.large }` ]: true,
+        [ `col m${ this.medium }` ]: true,
+        [ `col s${ this.small }` ]: true,
+        [ `col xl${ this.extraLarge }` ]: true,
+        [ `offset-l${ this.offsetLarge }` ]: this.offsetLarge,
+        [ `offset-m${ this.offsetMedium }` ]: this.offsetMedium,
+        [ `offset-s${ this.offsetSmall }` ]: this.offsetSmall,
+        [ `offset-xl${ this.offsetExtraLarge }` ]: this.offsetExtraLarge
+      };
     }
   }
 };

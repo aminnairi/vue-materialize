@@ -8,15 +8,15 @@
 export default {
   props: {
     full: {
-      type: Boolean,
-      default: false
+      "default": false,
+      "type": Boolean
     }
   },
 
   computed: {
     classes() {
       return {
-        container: !this.full,
+        "container": !this.full,
         "container-full": this.full
       };
     }

@@ -7,14 +7,14 @@
 <script>
 export default {
   props: {
-    new: {
-      type: Boolean,
-      default: false
+    "color": {
+      "default": false,
+      "type": String
     },
 
-    color: {
-      type: String,
-      default: false
+    "new": {
+      "default": false,
+      "type": Boolean
     }
   },
 
@@ -25,9 +25,9 @@ export default {
   computed: {
     classes() {
       return {
-        badge: true,
-        new: this["new"],
-        [`${this.color}`]: this.color
+        "badge": true,
+        "new": this[ "new" ],
+        [ `${ this.color }` ]: this.color
       };
     }
   }
