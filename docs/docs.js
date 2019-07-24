@@ -1,8 +1,5 @@
-// eslint-disable-next-line
-Vue.use(VueMaterializeCSS);
-
 window.addEventListener("load", () => {
-  // eslint-disable-next-line
+    // eslint-disable-next-line
     new Vue({
     el: "#app",
 
@@ -539,7 +536,7 @@ export default {
   }
 }
 </script>`
-          }, 
+          },
           link: "https://materializecss.com/badges.html",
           name: "Badge"
         }
@@ -582,6 +579,23 @@ export default {
       });
     },
 
+    mounted() {
+      const pushpinTarget = document.querySelector("#fixed-navigation");
+
+      this.newScrollSpy();
+      this.initializePrism();
+      this.initializeTabs();
+      this.initalizeClipboardJS();
+
+      // eslint-disable-next-line
+			M.Pushpin.init(pushpinTarget, {
+        top: 100
+      });
+    },
+    updated() {
+      this.initializeTabs();
+    },
+
     methods: {
       href(name) {
         return `#${ this.id(name) }`;
@@ -614,12 +628,15 @@ export default {
         M.Tabs.init(document.querySelectorAll(".tabs"));
       },
       initalizeClipboardJS() {
-        const clipboard = new ClipboardJS('.copy-to-clipboard');
+        const clipboard = new ClipboardJS(".copy-to-clipboard");
 
-        clipboard.on('success', function(event) {      
+        clipboard.on("success", event => {
           M.Toast.dismissAll();
-          
-          new M.Toast({html: "Copied.", classes: "teal darken-1"});
+
+          new M.Toast({
+            html: "Copied.",
+            classes: "teal darken-1"
+          });
 
           event.clearSelection();
         });
@@ -635,23 +652,6 @@ export default {
         this.searching = false;
         this.component.name = "";
       }
-    },
-
-    mounted() {
-      const pushpinTarget = document.querySelector("#fixed-navigation");
-
-      this.newScrollSpy();
-      this.initializePrism();
-      this.initializeTabs();
-      this.initalizeClipboardJS();
-
-      // eslint-disable-next-line
-			M.Pushpin.init(pushpinTarget, {
-        top: 100
-      });
-    },
-    updated() {
-      this.initializeTabs();
     }
   });
 });
