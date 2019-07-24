@@ -46,9 +46,8 @@ module.exports = [
       libraryTarget: "window"
     },
 
-    target: "web",
-
-		plugins: [new CleanWebpackPlugin()]
+    plugins: [new CleanWebpackPlugin()],
+    target: "web"
   }),
 
   merge(commonConfiguration, {
