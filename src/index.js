@@ -13,21 +13,19 @@ import MaterializeRadio from "./components/MaterializeRadio.vue";
 import MaterializeRow from "./components/MaterializeRow.vue";
 import MaterializeSwitch from "./components/MaterializeSwitch.vue";
 
-export default {
-  install(Vue) {
-    Vue.component("materialize-badge", MaterializeBadge);
-    Vue.component("materialize-brand-logo", MaterializeBrandLogo);
-    Vue.component("materialize-breadcrumb", MaterializeBreadcrumb);
-    Vue.component("materialize-breadcrumb-item", MaterializeBreadcrumbItem);
-    Vue.component("materialize-button", MaterializeButton);
-    Vue.component("materialize-checkbox", MaterializeCheckbox);
-    Vue.component("materialize-chips", MaterializeChips);
-    Vue.component("materialize-column", MaterializeColumn);
-    Vue.component("materialize-container", MaterializeContainer);
-    Vue.component("materialize-icon", MaterializeIcon);
-    Vue.component("materialize-navbar", MaterializeNavbar);
-    Vue.component("materialize-radio", MaterializeRadio);
-    Vue.component("materialize-row", MaterializeRow);
-    Vue.component("materialize-switch", MaterializeSwitch);
-  }
+export {
+  MaterializeBadge,
+  MaterializeBrandLogo,
+  MaterializeBreadcrumb,
+  MaterializeBreadcrumbItem,
+  MaterializeButton,
+  MaterializeCheckbox,
+  MaterializeChips,
+  MaterializeColumn,
+  MaterializeContainer,
+  MaterializeIcon,
+  MaterializeNavbar,
+  MaterializeRadio,
+  MaterializeRow,
+  MaterializeSwitch
 };
