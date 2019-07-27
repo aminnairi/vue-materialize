@@ -127,10 +127,21 @@
         </div>
       </div>
     </footer>
+    <div v-if="lightThemeDisplayed" class="fixed-action-btn" @click="toggleDarkOrLightTheme">
+      <a class="btn-floating btn-large black">
+        <i class="large material-icons white-text">brightness_3</i>
+      </a>
+    </div>
+    <div v-else class="fixed-action-btn" @click="toggleDarkOrLightTheme">
+        <a class="btn-floating btn-large white">
+          <i class="large material-icons black-text">brightness_5</i>
+        </a>
+      </div>
   </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.js" defer="true"></script>
     <script src="https://unpkg.com/materialize-css/dist/js/materialize.min.js" defer="true"></script>
     <script src="https://unpkg.com/vue/dist/vue.min.js" defer="true"></script>
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.4.0/lib/darkmode-js.min.js"></script>
     <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
     <script src="./index.js" defer="true"></script>
     <script src="./docs.js" defer="true"></script>

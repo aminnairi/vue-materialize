@@ -544,7 +544,8 @@ export default {
       scrollspy: {
         instances: null
       },
-      searching: false
+      searching: false,
+      lightThemeDisplayed: true
     },
     computed: {
       sortedComponents() {
@@ -627,6 +628,9 @@ export default {
          */
         M.Tabs.init(document.querySelectorAll(".tabs"));
       },
+      initializeDarkmodeJS() {
+        this.darkmode = new Darkmode();
+      },
       initalizeClipboardJS() {
         const clipboard = new ClipboardJS(".copy-to-clipboard");
 
@@ -651,7 +655,28 @@ export default {
       hideSearchBar() {
         this.searching = false;
         this.component.name = "";
+      },
+      toggleDarkOrLightTheme() {
+        this.darkmode.toggle();
+        this.lightThemeDisplayed = this.lightThemeDisplayed != true;
       }
+    },
+
+    mounted() {
+      const pushpinTarget = document.querySelector("#fixed-navigation");
+
+      this.newScrollSpy();
+      this.initializePrism();
+      this.initializeTabs();
+      this.initializeDarkmodeJS();
+
+      // eslint-disable-next-line
+			M.Pushpin.init(pushpinTarget, {
+        top: 100
+      });
+    },
+    updated() {
+      this.initializeTabs();
     }
   });
 });
