@@ -23,7 +23,7 @@
                     <a href="/vue-materialize" class="brand-logo">vue-materialize</a>
                     <ul class="right">
                       <li @click="displaySearchBar">
-                        <a href="javascript:;">
+                        <a href="" @click.prevent>
                           <i class="material-icons">search</i>
                         </a>
                       </li>
@@ -68,12 +68,18 @@
                       <li class="tab col s3"><a :href="href(component.name) + '-browser'" class="teal-text text-darken-1">Browser</a></li>
                     </ul>
                   </div>
-                  <div class="card-content card-content-unpadded">
+                  <div class="card-image card-content-unpadded">
                     <div :id="id(component.name) + '-node'">
                       <pre><code class="language-html">{{ component.code.node }}</code></pre>
+                      <button type="button" :data-clipboard-target="href(component.name) + '-node'" class="copy-to-clipboard btn-floating halfway-fab waves-effect waves-light teal darken-1">
+                        <i class="material-icons">file_copy</i>
+                      </button>
                     </div>
                     <div :id="id(component.name) + '-browser'">
                       <pre><code class="language-html">{{ component.code.browser }}</code></pre>
+                      <button type="button" :data-clipboard-target="href(component.name) + '-browser'" class="copy-to-clipboard btn-floating halfway-fab waves-effect waves-light teal darken-1">
+                        <i class="material-icons">file_copy</i>
+                      </button>
                     </div>
                   </div>
                   <div class="card-action">
@@ -129,6 +135,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.16.0/prism.js" defer="true"></script>
     <script src="https://unpkg.com/materialize-css/dist/js/materialize.min.js" defer="true"></script>
     <script src="https://unpkg.com/vue/dist/vue.min.js" defer="true"></script>
+    <script src="https://unpkg.com/clipboard@2/dist/clipboard.min.js"></script>
     <script src="./index.js" defer="true"></script>
     <script src="./docs.js" defer="true"></script>
   </body>

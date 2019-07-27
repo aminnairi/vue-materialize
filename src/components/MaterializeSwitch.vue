@@ -2,22 +2,27 @@
   <div class="switch">
     <label>
       {{ off }}
-      <input type="checkbox" v-on="$listeners" v-bind="$attrs" />
-      <span class="lever"></span>
+      <input
+        type="checkbox"
+        v-bind="$attrs"
+        v-on="$listeners">
+      <span class="lever" />
       {{ on }}
     </label>
   </div>
 </template>
+
 <script>
 export default {
   props: {
     off: {
-      type: String,
-      default: "Off"
+      "default": "Off",
+      "type": String
     },
+
     on: {
-      type: String,
-      default: "On"
+      "default": "On",
+      "type": String
     }
   }
 };
