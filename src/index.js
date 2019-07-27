@@ -5,6 +5,7 @@ import MaterializeBreadcrumbItem from "./components/MaterializeBreadcrumbItem.vu
 import MaterializeButton from "./components/MaterializeButton.vue";
 import MaterializeCheckbox from "./components/MaterializeCheckbox.vue";
 import MaterializeChips from "./components/MaterializeChips.vue";
+import MaterializeCollection from "./components/MaterializeCollection.vue";
 import MaterializeColumn from "./components/MaterializeColumn.vue";
 import MaterializeContainer from "./components/MaterializeContainer.vue";
 import MaterializeIcon from "./components/MaterializeIcon.vue";
@@ -21,6 +22,7 @@ export {
   MaterializeButton,
   MaterializeCheckbox,
   MaterializeChips,
+  MaterializeCollection,
   MaterializeColumn,
   MaterializeContainer,
   MaterializeIcon,

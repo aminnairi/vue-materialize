@@ -539,6 +539,48 @@ export default {
           },
           link: "https://materializecss.com/badges.html",
           name: "Badge"
+        },
+        {
+          code: {
+            browser: `<doctype html>
+<html>
+  <head>
+    <title>Example</title>
+  </head>
+  <body>
+    <div id="app">
+      <materialize-collection>
+        <!-- Collection items -->
+      </materialize-collection>
+    </div>
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-materialize/dist/index.js"></script>
+    <script>
+      Vue.use(VueMaterializeCSS);
+      
+      new Vue({
+        el: "#app"
+      });
+    </script>
+  </body>
+</html>`,
+            node: `<template>
+  <materialize-collection>
+    <!-- Collection items -->
+  </materialize-collection>
+</template>
+<script>
+import { MaterializeCollection } from "vue-materialize";
+
+export default {
+  components: {
+    MaterializeCollection
+  }
+}
+</script`
+          },
+          link: "https://materializecss.com/collections.html",
+          name: "Collection"
         }
       ],
       scrollspy: {
