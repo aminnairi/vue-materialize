@@ -652,6 +652,23 @@ export default {
         this.searching = false;
         this.component.name = "";
       }
+    },
+
+    mounted() {
+      const pushpinTarget = document.querySelector("#fixed-navigation");
+
+      this.newScrollSpy();
+      this.initializePrism();
+      this.initializeTabs();
+
+      // eslint-disable-next-line
+			M.Pushpin.init(pushpinTarget, {
+        top: 100,
+        offset: 64
+      });
+    },
+    updated() {
+      this.initializeTabs();
     }
   });
 });
