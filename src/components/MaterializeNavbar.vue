@@ -7,12 +7,13 @@
     </nav>
   </div>
 </template>
+
 <script>
 export default {
   props: {
     fixed: {
-      type: Boolean,
-      default: false
+      "default": false,
+      "type": Boolean
     }
   }
 };

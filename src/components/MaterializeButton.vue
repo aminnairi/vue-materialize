@@ -1,5 +1,9 @@
 <template>
-  <button :class="classes" :type="type" v-bind="$attrs" v-on="$listeners">
+  <button
+    :class="classes"
+    :type="type"
+    v-bind="$attrs"
+    v-on="$listeners">
     <slot />
   </button>
 </template>
@@ -7,47 +11,47 @@
 <script>
 export default {
   props: {
-    waves: {
-      type: String,
-      default: undefined
-    },
-
     flat: {
-      type: Boolean,
-      default: false
+      "default": false,
+      "type": Boolean
     },
 
     floating: {
-      type: Boolean,
-      default: false
-    },
-
-    submit: {
-      type: Boolean,
-      default: false
+      "default": false,
+      "type": Boolean
     },
 
     large: {
-      type: Boolean,
-      default: false
+      "default": false,
+      "type": Boolean
     },
 
     small: {
-      type: Boolean,
-      default: false
+      "default": false,
+      "type": Boolean
+    },
+
+    submit: {
+      "default": false,
+      "type": Boolean
+    },
+
+    waves: {
+      "default": undefined,
+      "type": String
     }
   },
 
   computed: {
     classes() {
       return {
-        btn: !this.flat && !this.floating,
+        "btn": !this.flat && !this.floating,
         "btn-flat": this.flat && !this.floating,
         "btn-floating": this.floating && !this.flat,
-        "btn-small": this.small && !this.large,
         "btn-large": this.large && !this.small,
+        "btn-small": this.small && !this.large,
         "waves-effect": this.waves,
-        [`waves-${waves}`]: this.waves
+        [ `waves-${ this.waves }` ]: this.waves
       };
     },
 

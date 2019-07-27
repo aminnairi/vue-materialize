@@ -1,7 +1,11 @@
 <template>
   <p>
     <label>
-      <input type="radio" v-on="$listeners" v-bind="$attrs" :class="classes" />
+      <input
+        type="radio"
+        v-bind="$attrs"
+        :class="classes"
+        v-on="$listeners">
       <span>
         <slot />
       </span>
@@ -11,13 +15,12 @@
 <script>
 export default {
   props: {
-    props: {
-      withGap: {
-        type: Boolean,
-        default: false
-      }
+    withGap: {
+      "default": false,
+      "type": Boolean
     }
   },
+
   computed: {
     classes() {
       return {
